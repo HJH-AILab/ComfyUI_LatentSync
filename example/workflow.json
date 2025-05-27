@@ -1,0 +1,190 @@
+{
+  "id": "5e00a0a1-8686-44d1-91a1-77cc3212b427",
+  "revision": 0,
+  "last_node_id": 11,
+  "last_link_id": 11,
+  "nodes": [
+    {
+      "id": 8,
+      "type": "IPAdapterInsightFaceLoader",
+      "pos": [
+        234,
+        655
+      ],
+      "size": [
+        284.8667907714844,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INSIGHTFACE",
+          "type": "INSIGHTFACE",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapterInsightFaceLoader"
+      },
+      "widgets_values": [
+        "CUDA",
+        "buffalo_l"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "ShowText|pysssss",
+      "pos": [
+        993,
+        541
+      ],
+      "size": [
+        210,
+        126
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "C:\\Users\\C\\Desktop\\latentsync2.mp4"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LatentSyncProcessingNode",
+      "pos": [
+        658.8072509765625,
+        500.63104248046875
+      ],
+      "size": [
+        274.9751892089844,
+        222
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "latentsync_pipeline",
+          "type": "LATENTSYNCPIPELINE",
+          "link": 10
+        },
+        {
+          "name": "insight_face",
+          "shape": 7,
+          "type": "INSIGHTFACE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output_path",
+          "type": "STRING",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentSyncProcessingNode"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        20,
+        2,
+        931,
+        "randomize"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "LipsyncPipelineNode",
+      "pos": [
+        234,
+        495
+      ],
+      "size": [
+        195.53378295898438,
+        26
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "latentsync_pipeline",
+          "type": "LATENTSYNCPIPELINE",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LipsyncPipelineNode"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      8,
+      8,
+      0,
+      2,
+      1,
+      "INSIGHTFACE"
+    ],
+    [
+      10,
+      10,
+      0,
+      2,
+      0,
+      "LATENTSYNCPIPELINE"
+    ],
+    [
+      11,
+      2,
+      0,
+      11,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "frontendVersion": "1.18.9",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
