@@ -10,13 +10,13 @@ ComfyUI_LatentSync 是一个对 [LatentSync](https://github.com/bytedance/Latent
     3. 添加了insight face连线, 现在你可以使用现有的insight face节点,而无需再重复下载一套冗余的insight face模型了  
 
 ## 如何使用
-    1. cd ComfyUI/custom_nodes/
-    2. git clone https://github.com/HJH-AILab/ComfyUI_LatentSync.git
-    3. cd ComfyUI_LatentSync
-    4. 安装[LatentSync](https://github.com/bytedance/LatentSync)依赖
-    5. 配置 ComfyUI/extra_model_paths.yaml
+    1. cd ComfyUI/custom_nodes/  
+    2. git clone https://github.com/HJH-AILab/ComfyUI_LatentSync.git  
+    3. cd ComfyUI_LatentSync  
+    4. 安装[LatentSync](https://github.com/bytedance/LatentSync)依赖  
+    5. 配置 ComfyUI/extra_model_paths.yaml  
         ```yaml
         comfyui:
-            LatentSync: <your_latentsync_models_path>
+            LatentSync: &lt;your_latentsync_models_path>
         ```
-    6. 下载模型到<your_latentsync_models_path>目录下
+    6. 下载模型到&lt;your_latentsync_models_path>目录下  
